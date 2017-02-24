@@ -5,7 +5,7 @@ ENV FUSEKI_BASE            /shared/fuseki-data
 
 ENV DEBUG_PORT 5009
 
-EXPOSE 3030
+EXPOSE 8080
 EXPOSE ${DEBUG_PORT}
 
 RUN export FUSEKI_DIST=${FUSEKI_VERSION}/jena-fuseki-war-${FUSEKI_VERSION}.war      && \

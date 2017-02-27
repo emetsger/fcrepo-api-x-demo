@@ -19,3 +19,9 @@ RUN export FUSEKI_DIST=${FUSEKI_VERSION}/jena-fuseki-war-${FUSEKI_VERSION}.war  
 
 COPY shiro.ini ${FUSEKI_BASE}
 COPY service-index.ttl ${FUSEKI_BASE}/configuration
+
+COPY entrypoint.sh /
+
+RUN chmod 700 /entrypoint.sh
+
+ENTRYPOINT [ "/entrypoint.sh" ]

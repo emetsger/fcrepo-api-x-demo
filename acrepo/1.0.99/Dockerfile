@@ -35,7 +35,7 @@ RUN sed -e "s:^\(    mvn\:org.apache.karaf.features/enterprise/${KARAF_VERSION}/
 
 RUN bin/start && \
     bin/client -r 10 -d 5  "feature:repo-add mvn:edu.amherst.acdc/acrepo-karaf/${ACREPO_VERSION}/xml/features" && \
-    bin/client -r 10 -d 5  "feature:install acrepo-exts-image acrepo-exts-pcdm acrepo-exts-serialize-xml acrepo-exts-template acrepo-exts-fits" && \
+    bin/client -r 10 -d 5  "feature:install acrepo-exts-image acrepo-exts-pcdm acrepo-exts-fits acrepo-services-jsonld acrepo-exts-serialize-xml" && \
     /bin/sleep 15 && \
     bin/stop
 

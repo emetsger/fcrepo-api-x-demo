@@ -60,5 +60,6 @@ services:
   fits:
     image: fcrepoapix/apix-fits:1.0.3
     container_name: fits
+    env_file: .env
     ports:
-      - "${FITS_PORT}:8080"
+      - "${FITS_PORT}:${FITS_PORT}"

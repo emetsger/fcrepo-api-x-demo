@@ -50,6 +50,9 @@ sed -e "s:rest\.port=.*:rest\.port=\${env\:ACREPO_IMAGE_PORT\:-9105}:" -i etc/ed
 # Update rest.port to ${env:ACREPO_FITS_PORT:-9106}
 sed -e "s:rest\.port=.*:rest\.port=\${env\:ACREPO_FITS_PORT\:-9106}:" -i etc/edu.amherst.acdc.exts.fits.cfg
 
+# Update fits.endpoint to fits:${env:FITS_PORT:-8082}/fits/examine
+sed -e "s:fits\.endpoint=.*:fits\.endpoint=fits\:\${env\:FITS_PORT\:-8082}/fits/examine:" -i etc/edu.amherst.acdc.exts.fits.cfg
+
 # Update rest.port to ${env:ACREPO_JSONLD_PORT:-9102}
 sed -e "s:rest\.port=.*:rest\.port=\${env\:ACREPO_JSONLD_PORT\:-9102}:" -i etc/edu.amherst.acdc.exts.jsonld.cfg
 
